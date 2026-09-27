@@ -1,1 +1,12 @@
-
+{
+  "name": "AI Vocal Remover",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "postCreateCommand": "pip install -r requirements.txt && sudo apt-get update && sudo apt-get install -y ffmpeg",
+  "forwardPorts": [7860],
+  "portsAttributes": {
+    "7860": {
+      "label": "Gradio App",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
